@@ -1,0 +1,66 @@
+#include <iostream>
+using namespace std;
+
+class matriz{
+	
+	public:
+	
+	int **miMatriz;
+	int x,y;	
+	
+///////CONSTRUCTOR///////////////
+	matriz(int a = 0, int b = 0)
+	{
+		miMatriz = nullptr;
+		x = a; y = b;	
+		/////////CREAR MATRIZ////////////
+	if((x > 0) || (y > 0))
+	{
+		
+	miMatriz = new int*[x];
+	for(int i = 0; i<=x; i++){
+		miMatriz[i] = new int[y];
+		
+	}
+	}
+	else{
+		cout << "x o y son iguales a 0" << endl;
+	}
+
+	}
+///////DARLE VALORES ALEATORIOS///////
+
+	void function_02(){
+	srand(time(0));	
+	int aleatorio;
+	
+	for(int i = 0;i<x;i++){
+		for(int j = 0; j<y;j++){
+			aleatorio =(rand() % 100);
+			*(*(miMatriz[i][j])) = aleatorio;
+		}	
+	}
+}
+	void function_03(){
+		for(int i = 0;i<x;i++){
+			for(int j = 0; j<y;j++){
+				cout << *(*(miMatriz));
+			}
+			cout << "\n";
+		}
+	}
+	
+};
+
+
+
+int main(){
+	
+	int h[10][10];
+	
+	matriz h[10][10];
+	h.function_02;
+	h.function_03;
+	
+return 0;	
+}
